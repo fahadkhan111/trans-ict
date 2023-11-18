@@ -1,0 +1,88 @@
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slider-container {
+  overflow: hidden; /* Hide overflowing content */
+  width: 100%; /* Set the width of the slider container */
+  position: relative; /* Make the container relative for absolute positioning */
+}
+
+.slider {
+  position: absolute; /* Position the slider absolutely inside the container */
+  white-space: nowrap; /* Prevent line breaks for smooth sliding */
+  animation: slide-loop 10s linear infinite; /* Animation to move the content to the left with a 20s pause in between */
+}
+
+.text-slider {
+  display: inline-block; /* Display the text elements in a row */
+  margin-left: 20px; /* Add margin to increase the gap between h1 elements */
+  margin-right: 20px; /* Add margin to increase the gap between h1 elements */
+}
+
+@keyframes slide-loop {
+  0%, 100% {
+    left: 100%; /* Start and end position: move the slider to the right */
+  }
+  50% {
+    left: 0%; /* Middle position: text stays in place for 20 seconds */
+  }
+}
+/* Keyframes for the animation */
+@keyframes resize {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); } /* Change the scaling factor to adjust the size */
+  100% { transform: scale(1); }
+}
+
+/* Styling for the circle */
+
+.myImage {
+  width: 300px; /* Set the width of the image as per your requirement */
+  height: auto; /* Adjust the height accordingly to maintain the aspect ratio */
+  margin-top: 110px;
+ /* Add some space between the circle and the image */
+}
+
+.imgcircle {
+ 
+/* float: right;
+margin-top: 80px;
+margin-right: 150px; */
+
+  animation: resize 5s infinite; /* Apply the resize animation continuously */
+}
+
+  .parent-div {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @keyframes slideInAndOut {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slideOutAndHide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
